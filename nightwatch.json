@@ -1,0 +1,53 @@
+{
+  "src_folders": [
+    "./tests"
+  ],
+  "output_folder": "./reports",
+  "page_objects_path": "./pages",
+  "test_workers": true,
+  "live_output": true,
+  "selenium": {
+    "start_process": true,
+    "server_path": "./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.7.1.jar",
+    "log_path": "",
+    "port": 4444,
+    "cli_args": {
+      "webdriver.chrome.driver": "./node_modules/.bin/chromedriver",
+      "webdriver.gecko.driver": "",
+      "webdriver.edge.driver": ""
+    }
+  },
+  "test_settings": {
+    "default": {
+      "launch_url": "http://localhost",
+      "selenium_port": 4444,
+      "selenium_host": "localhost",
+      "silent": true,
+      "skip_testcases_on_fail": false,
+      "output": true,
+      "screenshots": {
+        "enabled": true,
+        "path": "./reports/screenshots",
+        "on_failure": true,
+        "on_error": true
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "marionette": true,
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "skip_testcases_on_fail": false,
+        "chromeOptions": {
+          "args": [
+            "headless",
+            "no-sandbox",
+            "disable-gpu",
+            "--window-size=1200,900",
+            "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+          ]
+        }
+      }
+    }
+  }
+}
+
